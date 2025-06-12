@@ -1,2 +1,4 @@
 gurobipy
 pandas
+fastapi
+uvicorn

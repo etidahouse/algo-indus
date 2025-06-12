@@ -1,0 +1,20 @@
+services:
+  logistic-optimization:
+    image: etidahouse/logistic-optimization:latest
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
+    environment:
+      FLOWS_CSV: data/flows.csv
+      CELLS_CSV: data/cells.csv
+
+  logistic-ui:
+    image: etidahouse/logistic-ui:latest
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8501:8501"
+    environment:
+      FLOWS_CSV: data/flows.csv
+      CELLS_CSV: data/cells.csv

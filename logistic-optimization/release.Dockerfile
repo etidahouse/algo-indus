@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y build-essential && \
     pip install --upgrade pip && \
     pip install -r requirements.txt
 
-CMD ["python", "logistics_optimization/main.py"]
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000"]
