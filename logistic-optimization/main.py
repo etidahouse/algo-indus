@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
-from logistics_optimization.model import build_and_solve_model
-from logistics_optimization.writer import write_solution
+from model import build_and_solve_model
+from writer import write_solution
+from config import FLOWS_CSV, CELLS_CSV
 import pandas as pd
 import json
 import os
