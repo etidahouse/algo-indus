@@ -18,3 +18,6 @@ fi
 
 echo "logistic-optimization - Build release..."
 "$PARENT_DIR/logistic-optimization/sh/release"
+
+echo "logistic-ui - Build release..."
+"$PARENT_DIR/logistic-ui/sh/release"

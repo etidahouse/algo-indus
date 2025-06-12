@@ -11,16 +11,11 @@ DEV_COMMAND=${@:-"bash"}
 COMPONENT=$(basename "$ROOT_DIR")
 COMMAND_LABEL="Running $COMPONENT - $DEV_COMMAND"
 
-if [ "$DISABLE_DEV_CONTAINER" == "true" ]; then
-    echo "$COMMAND_LABEL"; bash -c "$DEV_COMMAND"; exit 0
-fi
-
 ROOT_VOLUME=${ROOT_VOLUME:-$ROOT_DIR}
 
 # shellcheck disable=SC2086
 docker run -it --rm \
     -v "$ROOT_VOLUME:/home" \
     -w "/home" \
-    -e "DISABLE_DEV_CONTAINER=true" \
     python:3.11-slim \
     bash
