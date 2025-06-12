@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+import os
 
 FLOWS_CSV = os.getenv("FLOWS_CSV", "flows.csv")
 CELLS_CSV = os.getenv("CELLS_CSV", "cells.csv")

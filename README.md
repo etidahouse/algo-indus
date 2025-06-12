@@ -33,7 +33,7 @@ cd deploy && docker-compose up
 
 ## Triggering an Optimization (API Call)
 ```bash
-curl -X POST http://localhost:8000/optimize \
+curl -X POST http://localhost:8080/optimize \
   -H "Content-Type: application/json" \
   -d @data/data.json
 ```

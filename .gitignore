@@ -41,6 +41,3 @@ logs
 
 # Python
 __pycache__
-
-# Data
-/data/
